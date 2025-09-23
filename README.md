@@ -35,31 +35,31 @@ Bem-vindo(a) ao meu repositório de documentação do **Bootcamp Santander Code 
 ## 📚 Módulos Completados
 Clique nos links para detalhes completos, incluindo notas pessoais, códigos e diagramas.
 
-- **[Módulo 1: Introdução ao Bootcamp Code Girls - AWS Cloud Foundations](/modulo-1/resumo.md)**  
+- **[Módulo 1: Introdução ao Bootcamp Code Girls - AWS Cloud Foundations](/modulo1-introducao-aws/resumo.md)**  
   Visão geral da AWS, conceitos fundamentais e configuração de conta.  
   *Chave Aprendida*: Infraestrutura global e segurança IAM.
 
-- **[Módulo 2: Computação na Nuvem com EC2](/modulo-2/resumo.md)**  
+- **[Módulo 2: Computação na Nuvem com EC2](/modulo2-ec2/resumo.md)**  
   Instâncias EC2, EBS/S3 e desafio de arquitetura.  
   *Projeto*: Diagrama EC2/EBS/S3/Lambda no Draw.io.
 
-- **[Módulo 3: Criando Recursos na AWS](/modulo-3/resumo.md)**  
+- **[Módulo 3: Criando Recursos na AWS](/modulo3-s3-lambda/resumo.md)**  
   Hands-on com EC2, S3 e Lambda (Hello World serverless).  
   *Ferramentas*: MobaXterm e Git Bash.
 
-- **[Módulo 4: Redes na AWS](/modulo-4/MODULO-4.md)**  
+- **[Módulo 4: Redes na AWS](/modulo4-redes/resumo.md)**  
   VPC, Subnets, Security Groups, Route 53, CloudFront e ELB.  
   *Chave Aprendida*: Isolamento de rede e distribuição de tráfego.
 
-- **[Módulo 5: Bancos de Dados na AWS](/modulo-5/resumo.md)**  
+- **[Módulo 5: Bancos de Dados na AWS](/modulo5-bancos-dados/resumo.md)**  
   RDS, DynamoDB e estratégias de backup.  
   *Projeto*: Configuração de RDS com multi-AZ.
 
-- **[Módulo 6: Serviços de Armazenamento e CDN](/modulo-6/resumo.md)**  
+- **[Módulo 6: Serviços de Armazenamento e CDN](/modulo6-armazenamento-cdn/resumo.md)**  
   S3 avançado, Glacier e CloudFront.  
   *Chave Aprendida*: Classes de storage para otimização de custos.
 
-- **[Módulo 7: Serviços Intermediários e Avançados](/modulo-7/resumo.md)**  
+- **[Módulo 7: Serviços Intermediários e Avançados](/modulo7-servicos-avancados/resumo.md)**  
   Lambda avançado, ECS/EKS e SNS/SQS.  
   *Projeto*: Fluxo assíncrono SNS -> SQS -> Lambda.
 
@@ -134,4 +134,5 @@ Quer trocar ideias ou tirar dúvidas?
 ---
 
 > Obrigada por conferir meu projeto! 🙌
+
 
