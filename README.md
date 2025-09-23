@@ -2,68 +2,93 @@
   <img src="/extras/banner.png" alt="AWS Cloud Bootcamp" width="800"/>
 </p>
 
-# Bootcamp Santander Code Girls 2025 – AWS Cloud Journey
+<div align = "center">
+ 
+# 🚀 Bootcamp Santander Code Girls 2025: Minha Jornada na AWS
+
+Bem-vindo(a) ao meu repositório de documentação do **Bootcamp Santander Code Girls 2025**! Este bootcamp é uma iniciativa incrível do Santander em parceria com a AWS, focada em empoderar mulheres na tecnologia, com ênfase em computação em nuvem (AWS). Meu objetivo aqui é registrar meu aprendizado de forma estruturada, revisando conceitos chave para aprofundar meu conhecimento.
 
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazon-aws&style=flat-square)
 ![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python&style=flat-square)
 ![Bootcamp](https://img.shields.io/badge/Bootcamp-CodeGirls-pink?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow?style=flat-square)
 
----
-
-## 💡 Sobre este Repositório
-
-Este repositório documenta toda a **jornada do Bootcamp Santander Code Girls 2025**, focado em **AWS Cloud**.  
-
-Objetivos:
-
-- 💼 **Portfólio Profissional**: Demonstra habilidades práticas em AWS.  
-- 📚 **Material Didático**: Auxilia outros devs a aprenderem AWS.  
-- 🔄 **Revisão de Conceitos**: Facilita estudar e consolidar o aprendizado do bootcamp.
+</div>
 
 ---
 
-## 📂 Estrutura do Repositório
+## 📋 Sobre o Bootcamp
+- **Foco Principal**: Fundamentos da AWS, desde conceitos básicos até serviços avançados como computação, redes, bancos de dados e DevOps.
+- **Meu Progresso**: Até o momento, completei os Módulos 1 a 7 (70% do curso). Os módulos restantes (8-11) estão pendentes e serão atualizados conforme avanço. Veja detalhes em cada pasta de módulo.
+- **Habilidades Adquiridas**: Configuração de contas AWS, criação de instâncias EC2, buckets S3, funções Lambda, VPCs, RDS/DynamoDB, e mais. Incluí desafios práticos e diagramas para demonstrar aplicação real.
+- **Por Que Este Repo?** 
+  - Para **recrutadores**: Veja meus projetos hands-on e como apliquei conceitos em cenários reais.
+  - Para **outros devs**: Dicas, links para docs AWS e revisões de conceitos para quem está aprendendo nuvem.
+  - Para **mim**: Espaço para revisar e aprofundar, com notas pessoais e reflexões.
 
-bootcamp-codegirls-2025/
-├── README.md
-├── modulo1-introducao-aws/
-├── modulo2-ec2/
-├── modulo3-s3-lambda/
-├── modulo4-redes/
-├── modulo5-bancos-dados/
-├── modulo6-armazenamento-cdn/
-├── modulo7-servicos-avancados/
-├── modulo8-gerenciamento-governanca/ (em desenvolvimento)
-├── modulo9-seguranca-aws/ (em desenvolvimento)
-├── modulo10-desenvolvimento/ (em desenvolvimento)
-├── modulo11-automacao-devops/ (em desenvolvimento)
-└── diagramas/
+> **Dica para Iniciantes**: Comece criando uma conta AWS gratuita em [aws.amazon.com/free](https://aws.amazon.com/free). Sempre siga as melhores práticas de segurança!
 
+[![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws)](https://aws.amazon.com/) [![Women in Tech](https://img.shields.io/badge/Women%20in%20Tech-Pink?style=for-the-badge&logo=women-who-code)](https://www.womenwhocode.com/) [![Progress](https://img.shields.io/badge/Progress-70%25-brightgreen?style=for-the-badge)](https://github.com/seu-usuario/bootcamp-santander-code-girls-2025)
 
 ---
 
-## 🌟 Módulos
+## 📚 Módulos Completados
+Clique nos links para detalhes completos, incluindo notas pessoais, códigos e diagramas.
 
-| Módulo | Conteúdo | Link |
-|--------|----------|------|
-| **1 – Introdução AWS** | Conceitos básicos, VPC, contas e segurança | [Resumo](modulo1-introducao-aws/resumo.md) |
-| **2 – Computação e Armazenamento** | EC2, EBS, S3, arquitetura prática | [Resumo](modulo2-ec2/resumo.md) |
-| **3 – Criando Recursos** | EC2 avançado, S3, Lambda | [Resumo](modulo3-s3-lambda/resumo.md) |
-| **4 – Redes** | VPC, subnets, SG, Route 53, CloudFront, ELB | [Resumo](modulo4-redes/resumo.md) |
-| **5 – Bancos de Dados** | RDS, DynamoDB, Backup/Restore | [Resumo](modulo5-bancos-dados/resumo.md) |
-| **6 – Armazenamento e CDN** | S3, Glacier, CloudFront | [Resumo](modulo6-armazenamento-cdn/resumo.md) |
-| **7 – Serviços Avançados** | Lambda avançado, ECS, EKS, SNS, SQS | [Resumo](modulo7-servicos-avancados/resumo.md) |
-| **8 a 11** | Gerenciamento, Segurança, Desenvolvimento, DevOps | Em desenvolvimento |
+- **[Módulo 1: Introdução ao Bootcamp Code Girls - AWS Cloud Foundations](/modulo-1/resumo.md)**  
+  Visão geral da AWS, conceitos fundamentais e configuração de conta.  
+  *Chave Aprendida*: Infraestrutura global e segurança IAM.
+
+- **[Módulo 2: Computação na Nuvem com EC2](/modulo-2/resumo.md)**  
+  Instâncias EC2, EBS/S3 e desafio de arquitetura.  
+  *Projeto*: Diagrama EC2/EBS/S3/Lambda no Draw.io.
+
+- **[Módulo 3: Criando Recursos na AWS](/modulo-3/resumo.md)**  
+  Hands-on com EC2, S3 e Lambda (Hello World serverless).  
+  *Ferramentas*: MobaXterm e Git Bash.
+
+- **[Módulo 4: Redes na AWS](/modulo-4/MODULO-4.md)**  
+  VPC, Subnets, Security Groups, Route 53, CloudFront e ELB.  
+  *Chave Aprendida*: Isolamento de rede e distribuição de tráfego.
+
+- **[Módulo 5: Bancos de Dados na AWS](/modulo-5/resumo.md)**  
+  RDS, DynamoDB e estratégias de backup.  
+  *Projeto*: Configuração de RDS com multi-AZ.
+
+- **[Módulo 6: Serviços de Armazenamento e CDN](/modulo-6/resumo.md)**  
+  S3 avançado, Glacier e CloudFront.  
+  *Chave Aprendida*: Classes de storage para otimização de custos.
+
+- **[Módulo 7: Serviços Intermediários e Avançados](/modulo-7/resumo.md)**  
+  Lambda avançado, ECS/EKS e SNS/SQS.  
+  *Projeto*: Fluxo assíncrono SNS -> SQS -> Lambda.
+
+  ---
+
+## ⏳ Módulos Pendentes
+Estou animada para os próximos! Atualizarei este repo assim que completar. Por enquanto, placeholders com descrições genéricas baseadas no currículo.
+
+- **[Módulo 8: Gerenciamento e Governança na AWS](/modulo-8/MODULO-8.md)**  
+  (Pendente: CloudWatch, IAM avançado, Cost Explorer).
+
+- **[Módulo 9: Segurança na AWS](/modulo-9/MODULO-9.md)**  
+  (Pendente: KMS, GuardDuty, WAF).
+
+- **[Módulo 10: Desenvolvimento e Ferramentas](/modulo-10/MODULO-10.md)**  
+  (Pendente: SDKs, CLI, SAM para serverless).
+
+- **[Módulo 11: Automação e DevOps na AWS](/modulo-11/MODULO-11.md)**  
+  (Pendente: CodePipeline, CloudFormation, Terraform).
 
 ---
 
-## 🎨 Destaques do Projeto
+## 🛠️ Recursos Úteis e Dicas para Aprender AWS
+- **Docs Oficiais**: [AWS Documentation](https://docs.aws.amazon.com/) – Comece pelo Free Tier.
+- **Ferramentas**: Draw.io para diagramas, AWS CLI para automação, MobaXterm para SSH/RDP. Veja mais em [/recursos/RECUSOS-GERAIS.md](/recursos/RECUSOS-GERAIS.md).
+- **Comunidade**: Participe do [AWS Community Builders](https://aws.amazon.com/developer/community/) ou fóruns como Reddit r/aws.
+- **Certificação**: Após o bootcamp, mire na AWS Certified Cloud Practitioner.
+- **Dica de Revisão**: Use este repo para flashcards – crie issues no GitHub para conceitos chave.
 
-- 💻 **Hands-on reais** com AWS Console, CLI, MobaXterm e Draw.io  
-- 📊 **Diagramas visuais** de arquitetura, facilitando compreensão de fluxo  
-- 🐍 **Exemplos de código** em Python e integração com AWS Lambda  
-- 📖 **Organização didática**, perfeita para estudo e revisão rápida
 
 ---
 
@@ -78,7 +103,7 @@ bootcamp-codegirls-2025/
 
 ---
 
-🌟 **Status do Bootcamp**
+## 🌟 **Status do Bootcamp**
 
 - [x] Módulo 1 – Fundamentos ![Concluído](https://img.shields.io/badge/Status-Concluído-brightgreen)
 - [x] Módulo 2 – EC2 e Armazenamento ![Concluído](https://img.shields.io/badge/Status-Concluído-brightgreen)
@@ -94,11 +119,18 @@ bootcamp-codegirls-2025/
 
 ---
 
-## 🚀 Como Usar este Repositório
+## 🎯 Conclusão e Próximos Passos
+Este bootcamp me transformou em uma dev mais confiante na AWS, com skills práticas em cloud architecture. Aprendi a importância de escalabilidade, segurança e custo-otimização.
 
-1. Clone o projeto:
+---
 
-```bash
-git clone https://github.com/AnnyKaah/cloud-girls-aws-journey.git
+## 📌 Contato
+Quer trocar ideias ou tirar dúvidas?  
+- **LinkedIn:** [Anny Karoline](https://www.linkedin.com/in/annykarolinedecarvalhomartins/)  
+- **Email:** annykamartins@icloud.com
 
+**Atualizado em**: 23/09/2025. 
 
+---
+
+> Obrigada por conferir meu projeto! 🙌
