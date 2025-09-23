@@ -2,7 +2,7 @@
   <img src="/extras/banner.png" alt="AWS Cloud Bootcamp" width="800"/>
 </p>
 
-# 🚀 Bootcamp Santander Code Girls 2025 – AWS Cloud Journey
+# Bootcamp Santander Code Girls 2025 – AWS Cloud Journey
 
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazon-aws&style=flat-square)
 ![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python&style=flat-square)
@@ -100,4 +100,5 @@ bootcamp-codegirls-2025/
 
 ```bash
 git clone https://github.com/AnnyKaah/cloud-girls-aws-journey.git
+
 
