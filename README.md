@@ -4,7 +4,7 @@
 
 <div align = "center">
  
-# 🚀 Bootcamp Santander Code Girls 2025: Minha Jornada na AWS
+# Bootcamp Santander Code Girls 2025: Minha Jornada na AWS
 
 Bem-vindo(a) ao meu repositório de documentação do **Bootcamp Santander Code Girls 2025**! Este bootcamp é uma iniciativa incrível do Santander em parceria com a AWS, focada em empoderar mulheres na tecnologia, com ênfase em computação em nuvem (AWS). Meu objetivo aqui é registrar meu aprendizado de forma estruturada, revisando conceitos chave para aprofundar meu conhecimento.
 
@@ -134,3 +134,4 @@ Quer trocar ideias ou tirar dúvidas?
 ---
 
 > Obrigada por conferir meu projeto! 🙌
+
