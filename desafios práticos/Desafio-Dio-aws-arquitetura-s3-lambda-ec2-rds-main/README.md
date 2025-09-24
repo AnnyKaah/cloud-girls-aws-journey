@@ -1,11 +1,11 @@
-# 🚀 Arquiteturas AWS - Desafio prático
+# Arquiteturas AWS - Desafio prático
 
 Este repositório contém dois diagramas de arquiteturas AWS desenvolvidos no **Draw.io (diagrams.net)**.  
 O objetivo foi demonstrar na prática o funcionamento de diferentes combinações de serviços na nuvem e documentar o aprendizado de forma clara e acessível.  
 
 ---
 
-## 📌 Sobre o Desafio
+## Sobre o Desafio
 Criar diagramas que representem duas abordagens arquiteturais na AWS:
 
 1. **Serverless (S3 + Lambda + CloudWatch)** → solução escalável e orientada a eventos.  
@@ -48,25 +48,25 @@ Fluxo: Usuário → ELB → EC2 → EBS/RDS → Resposta → Logs no CloudWatch
 
 ---
 
-## 💡 Aprendizados
+## Aprendizados
 - Compreensão das diferenças entre arquiteturas **serverless** e **tradicionais**.  
 - Visualização prática de como serviços da AWS se conectam.  
 - Experiência em documentar projetos técnicos de forma organizada e clara.  
 
 ---
 
+```markdown
 ## 📂 Estrutura do Repositório
-/
-├── README.md -> Documentação principal
-├── images/ -> Capturas dos diagramas
-│ ├── arquitetura1.png
-│ └── arquitetura2.png
-└── desafio.drawio -> Arquivo editável
+
+- 📘 **README.md** → Documentação principal do projeto  
+- 🖼️ **images/** → Capturas e diagramas utilizados  
+  - arquitetura1.png  
+  - arquitetura2.png  
+- 📝 **desafio.drawio** → Arquivo editável do diagrama no [Draw.io]
+```
 
 ---
 
-## ✨ Sobre mim
-Sou desenvolvedora web full stack com foco em **soluções escaláveis** e **boas práticas de arquitetura**.  
-Esse desafio reforçou meu interesse em **cloud computing** e em aplicar AWS como base para projetos robustos e modernos.  
+>Esse desafio reforçou meu interesse em **cloud computing** e em aplicar AWS como base para projetos robustos e modernos.  
 
 🔗 Vamos nos conectar no [LinkedIn](https://www.linkedin.com/in/annykarolinedecarvalhomartins/)  
