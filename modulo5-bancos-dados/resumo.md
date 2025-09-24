@@ -44,3 +44,65 @@ Neste módulo, aprendemos sobre **Amazon RDS**, **DynamoDB** e estratégias de *
 - Escolher **RDS para dados relacionais** e **DynamoDB para NoSQL**  
 - Garantir que backups estejam em **outra região** para recuperação em desastres  
 - Monitorar métricas com **CloudWatch** para antecipar problemas
+
+## Backup e Restore (S3 e RDS)
+
+> ✅ Explicação: A aplicação envia dados → backup automático → armazenamento durável → restauração → retorna para o banco/S3.
+
+```mermaid
+graph TD
+    A[💻 Aplicação / Usuário] --> B[📁 S3 Bucket / 💾 RDS Database]
+    B --> C[🗂 Backup Automático]
+    C --> D[📦 Armazenamento Durável - Glacier / Backup RDS]
+    D --> E[🔄 Restore Disponível]
+    E --> B
+
+    style A fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style B fill:#FFD700,color:#000
+    style C fill:#4A90E2,color:#FFF
+    style D fill:#9013FE,color:#FFF
+    style E fill:#00FF00,stroke:#333,stroke-width:2px
+
+```
+
+---
+
+## DynamoDB Table
+
+> ✅ Explicação: Fluxo de dados e eventos: app escreve/consulta → DynamoDB → eventos disparam Lambda → logs monitorados no CloudWatch.
+
+```mermaid
+graph TD
+    A[💻 Aplicacao / Usuario] --> B[📋 DynamoDB Table]
+    B --> C[⚡ Lambda Function - Event Trigger]
+    C --> D[📊 CloudWatch Logs]
+    B --> D
+
+    style A fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style B fill:#FFD700,color:#000
+    style C fill:#4A90E2,color:#FFF
+    style D fill:#9013FE,color:#FFF
+```
+
+---
+
+## RDS Dashboard
+
+> ✅ Explicação: Métricas e logs vão para o CloudWatch, que alimenta dashboards e aciona alarmes e notificações, refletindo melhor o monitoramento RDS.
+> 
+```mermaid
+graph TD
+    A[💾 RDS Database] --> B[📊 CloudWatch Metrics]
+    A --> C[📋 CloudWatch Logs]
+    B --> D[📈 Dashboard Personalizado]
+    C --> D
+    D --> E[🚨 Alarmes - Thresholds]
+    E --> F[🔔 Notificacoes / Acoes Automatizadas]
+
+    style A fill:#FFD700,color:#000
+    style B fill:#4A90E2,color:#FFF
+    style C fill:#9013FE,color:#FFF
+    style D fill:#FF9900,color:#000
+    style E fill:#FF9900,color:#000
+    style F fill:#00FF00,stroke:#333,stroke-width:2px
+```
