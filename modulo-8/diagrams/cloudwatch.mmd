@@ -1,14 +1,14 @@
 ```mermaid
 graph TD
-    A["💻 EC2"] --> D["📊 CloudWatch Metrics & Logs"]
-    B["📁 S3"] --> D
-    C["⚡ Lambda"] --> D
-    D --> E["📈 Dashboards Personalizados"]
-    D --> F["🔍 Logs Insights - Consultas Avançadas"]
-    E --> G["🚨 Alarmes - Thresholds"]
+    A["EC2"] --> D["CloudWatch Metrics & Logs"]
+    B["S3"] --> D
+    C["Lambda"] --> D
+    D --> E["Dashboards Personalizados"]
+    D --> F["Logs Insights - Consultas Avançadas"]
+    E --> G["Alarmes - Thresholds"]
     F --> G
-    G --> H["🤖 Ações Automatizadas (SNS, Lambda, Auto Scaling)"]
-    H --> I["✅ Notificações ou Correções"]
+    G --> H["Ações Automatizadas (SNS, Lambda, Auto Scaling)"]
+    H --> I["Notificações ou Correções"]
 
     style A fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
     style B fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
@@ -19,4 +19,4 @@ graph TD
     style G fill:#FF9900,color:#000
     style H fill:#4A90E2,color:#FFF
     style I fill:#00FF00,stroke:#333,stroke-width:2px
-
+```
