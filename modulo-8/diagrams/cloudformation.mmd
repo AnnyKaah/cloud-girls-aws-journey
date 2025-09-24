@@ -1,13 +1,18 @@
 flowchart LR
-    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF,font-size:14px;
-    classDef userNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000,font-size:14px;
+    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF;
+    classDef userNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000;
 
-    A[Template YAML/JSON]:::userNode --> B[CloudFormation Stack (Create/Update)]:::awsNode
+    A["Template YAML/JSON"]
+    B["CloudFormation Stack (Create/Update)"]
+    C["EC2 Instance (com EBS)"]
+    D["S3 Bucket (com Politicas)"]
+    E["IAM Role (para Lambda/EC2)"]
+    F["Security Group (Firewall Rules)"]
 
-    B --> C[EC2 Instance (com EBS)]:::awsNode
-    B --> D[S3 Bucket (com Políticas)]:::awsNode
-    B --> E[IAM Role (para Lambda/EC2)]:::awsNode
-    B --> F[Security Group (Firewall Rules)]:::awsNode
-
+    A:::userNode --> B:::awsNode
+    B --> C:::awsNode
+    B --> D:::awsNode
+    B --> E:::awsNode
+    B --> F:::awsNode
     F --> C
     F --> D
