@@ -1,6 +1,6 @@
 # Módulo 3 – Criando Recursos na AWS
 
-## 📌 Resumo
+## Resumo
 Neste módulo, aprendemos a criar **instâncias EC2**, **buckets S3** e **funções Lambda**. Também exploramos a diferença entre EC2 e Lambda (serverless) e como configurar o acesso remoto com MobaXterm.  
 
 ---
@@ -36,7 +36,7 @@ Neste módulo, aprendemos a criar **instâncias EC2**, **buckets S3** e **funç�
 
 ---
 
-## 🌀 Criando sua Primeira Função AWS Lambda
+## Criando sua Primeira Função AWS Lambda
 
 - **Serverless**: execução de código sem gerenciar servidores  
 - **Diferença EC2 x Lambda**:
@@ -47,3 +47,36 @@ Neste módulo, aprendemos a criar **instâncias EC2**, **buckets S3** e **funç�
   2. Escolher runtime (ex.: Python 3.9)  
   3. Inserir código simples: `def lambda_handler(event, context): return "Hello World"`  
   4. Testar com evento de teste  
+
+## 🏗️ Diagrama – Fluxo EC2 → S3 → Lambda
+
+```mermaid
+graph TD
+    A[💻 EC2 Instance] --> B[📁 S3 Bucket - Upload de Arquivos]
+    B --> C[⚡ AWS Lambda - Processamento de Evento]
+
+    %% Estilos
+    style A fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style B fill:#FFD700,color:#000
+    style C fill:#4A90E2,color:#FFF
+```
+> ✅ Explicação: EC2 envia dados para S3 → S3 gera evento de criação → Lambda processa automaticamente.
+
+## 🏗️ Diagrama – Lambda Dashboard no CloudWatch
+
+```mermaid
+graph TD
+    A[⚡ AWS Lambda] --> B[📊 CloudWatch Metrics & Logs]
+    B --> C[📈 Dashboard Personalizado]
+    C --> D[🚨 Alarmes - Thresholds]
+    D --> E[🔔 Notificações ou Ações Automatizadas]
+
+    %% Estilos
+    style A fill:#4A90E2,color:#FFF
+    style B fill:#4A90E2,color:#FFF
+    style C fill:#9013FE,color:#FFF
+    style D fill:#FF9900,color:#000
+    style E fill:#00FF00,stroke:#333,stroke-width:2px
+```
+
+> ✅ Explicação: Lambda envia métricas e logs → Dashboard consolida → Alarmes monitoram thresholds → Notificações ou ações automatizadas.
