@@ -32,6 +32,40 @@ Este módulo apresenta os conceitos de **Amazon EC2**, tipos de instâncias, oti
 
 ## 🏗️ Desafio de Arquitetura
 
-- Criar diagrama que envolva: EC2 + EBS + S3 + Lambda  
-- Ferramenta sugerida: **Draw.io**  
-- Objetivo: entender como os serviços se conectam e como funcionaria um fluxo real de dados  
+### Arquitetura EC2 → S3 → Lambda
+
+```mermaid
+graph TD
+    A[💻 EC2 Instance] --> B[📁 S3 Bucket - Armazenamento de Dados]
+    B --> C[⚡ AWS Lambda - Processamento de Eventos]
+
+    %% Estilos
+    style A fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style B fill:#FFD700,color:#000
+    style C fill:#4A90E2,color:#FFF
+```
+
+> ✅ Explicação: EC2 envia/processa dados → S3 armazena → Lambda processa eventos automaticamente.  
+
+---
+
+### **2️⃣ EC2 Dashboard no CloudWatch**
+
+### EC2 Dashboard - Monitoramento
+
+```mermaid
+graph TD
+    A[💻 EC2 Instance] --> B[📊 CloudWatch Metrics & Logs]
+    B --> C[📈 Dashboard Personalizado]
+    C --> D[🚨 Alarmes - Thresholds]
+    D --> E[🔔 Notificações ou Ações Automatizadas]
+
+    %% Estilos
+    style A fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style B fill:#4A90E2,color:#FFF
+    style C fill:#9013FE,color:#FFF
+    style D fill:#FF9900,color:#000
+    style E fill:#00FF00,stroke:#333,stroke-width:2px
+```
+> ✅ Explicação: EC2 envia métricas para CloudWatch → Dashboard consolida → Alarmes monitoram thresholds → Notificações ou ações automatizadas.
+
