@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/images/banner.png" alt="AWS cloudformation banner" width="1000"/>
+  <img src="desafios práticos/desafio-aws-cloudformation/images/banner.png" alt="AWS cloudformation banner" width="1000"/>
 </p>
 
 <div align = "center">
@@ -146,3 +146,4 @@ Quer trocar ideias ou tirar dúvidas?
 ---
 
 > Obrigada por conferir meu projeto! 🙌
+
