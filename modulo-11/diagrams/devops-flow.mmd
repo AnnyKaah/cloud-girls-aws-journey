@@ -1,0 +1,19 @@
+flowchart LR
+    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF,font-size:14px;
+    classDef devNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000,font-size:14px;
+
+    subgraph "💻 Desenvolvedor"
+        A[Commit Código / Push Git]:::devNode
+    end
+
+    subgraph "⚙ CI/CD AWS"
+        B[CodeBuild]:::awsNode
+        C[CodeDeploy]:::awsNode
+        D[Pipeline Completa]:::awsNode
+    end
+
+    subgraph "🌐 Infra AWS"
+        E[EC2 / Lambda / S3]:::awsNode
+    end
+
+    A --> B --> C --> D --> E

@@ -1,0 +1,25 @@
+flowchart LR
+    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF,font-size:14px;
+    classDef userNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000,font-size:14px;
+
+    subgraph "👤 Usuário/Cliente"
+        A[Usuário]:::userNode
+    end
+
+    subgraph "💻 Aplicação"
+        B[Lambda / EC2]:::awsNode
+    end
+
+    subgraph "💾 Armazenamento"
+        C[S3 / RDS]:::awsNode
+        D[KMS - Gerenciamento de Chaves]:::awsNode
+    end
+
+    subgraph "🔐 Criptografia"
+        E[TLS/HTTPS]:::userNode
+    end
+
+    A --> E --> B
+    B --> C
+    B --> D
+    D --> C

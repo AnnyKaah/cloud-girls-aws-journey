@@ -1,0 +1,30 @@
+flowchart LR
+    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF,font-size:14px;
+    classDef userNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000,font-size:14px;
+
+    subgraph "🏢 AWS Account"
+        A[AWS Account]:::awsNode
+    end
+
+    subgraph "👤 Usuário / Desenvolvedor"
+        B[Configura recursos corretamente]:::userNode
+    end
+
+    subgraph "🔧 Segurança"
+        C[IAM Policies & MFA]:::awsNode
+        D[CloudTrail & CloudWatch Logs]:::awsNode
+        E[AWS Config & Security Services]:::awsNode
+    end
+
+    subgraph "🚨 Monitoramento e Resposta"
+        F[Detecção e Auditoria]:::awsNode
+        G[Resposta a Incidentes]:::awsNode
+    end
+
+    B --> C
+    B --> D
+    B --> E
+    C --> F
+    D --> F
+    E --> F
+    F --> G

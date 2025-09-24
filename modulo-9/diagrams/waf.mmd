@@ -1,0 +1,28 @@
+flowchart LR
+    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF,font-size:14px;
+    classDef userNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000,font-size:14px;
+
+    subgraph "🌐 Tráfego Web"
+        A[Usuário Internet]:::userNode
+    end
+
+    subgraph "💻 Serviços AWS"
+        B[CloudFront / ALB / API Gateway]:::awsNode
+        C[AWS WAF Web ACL]:::awsNode
+    end
+
+    subgraph "📜 Regras"
+        D[Managed Rules (OWASP Top 10)]:::awsNode
+        E[Custom Rules (Rate Limiting)]:::awsNode
+    end
+
+    F[Bloqueio de Ataques]:::awsNode
+    G[CloudWatch Logs - Monitoramento]:::awsNode
+
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    D --> F
+    E --> F
+    F --> G

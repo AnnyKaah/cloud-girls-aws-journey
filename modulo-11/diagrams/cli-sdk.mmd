@@ -1,0 +1,17 @@
+flowchart LR
+    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF,font-size:14px;
+    classDef devNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000,font-size:14px;
+
+    subgraph "👨‍💻 Desenvolvedor"
+        A[Escreve Scripts CLI / SDK]:::devNode
+    end
+
+    subgraph "📡 AWS Services"
+        B[EC2 / Lambda / S3 / DynamoDB]:::awsNode
+    end
+
+    subgraph "🛠 Processos"
+        C[Executa Scripts / Automação]:::devNode
+    end
+
+    A --> C --> B

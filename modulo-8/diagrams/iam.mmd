@@ -1,0 +1,52 @@
+flowchart LR
+    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF,font-size:14px;
+    classDef userNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000,font-size:14px;
+    classDef groupNode fill:#00BFFF,stroke:#333,stroke-width:2px,color:#FFF,font-size:14px;
+    classDef roleNode fill:#32CD32,stroke:#333,stroke-width:2px,color:#000,font-size:14px;
+
+    subgraph "🏢 AWS Account"
+        A[AWS Account]:::awsNode
+    end
+
+    subgraph "👤 Users (Humanos)"
+        B[User 1]:::userNode
+        C[User 2]:::userNode
+    end
+
+    subgraph "👥 Groups"
+        D[Devs Group]:::groupNode
+        E[Admins Group]:::groupNode
+    end
+
+    subgraph "🤖 Roles"
+        F[Lambda Role]:::roleNode
+        G[EC2 Role]:::roleNode
+    end
+
+    subgraph "📜 Policies"
+        H[S3 ReadOnly Policy]:::awsNode
+        I[Admin Policy]:::awsNode
+    end
+
+    subgraph "🗂 Recursos AWS"
+        J[S3 Bucket]:::awsNode
+        K[EC2 Instance]:::awsNode
+    end
+
+    %% Conexões
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    A --> F
+    A --> G
+
+    B --> H
+    C --> H
+    D --> H
+    E --> I
+    F --> H
+    G --> I
+
+    H --> J
+    I --> K

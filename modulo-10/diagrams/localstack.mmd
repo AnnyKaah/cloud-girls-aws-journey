@@ -1,0 +1,20 @@
+flowchart LR
+    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF,font-size:14px;
+    classDef devNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000,font-size:14px;
+
+    subgraph "👨‍💻 Desenvolvedor"
+        A[Escreve Código & Templates SAM]:::devNode
+    end
+
+    subgraph "🐳 LocalStack"
+        B[S3 / Lambda / DynamoDB]:::awsNode
+    end
+
+    subgraph "🛠 Ferramentas"
+        C[VS Code + AWS Toolkit]:::devNode
+        D[Postman / Testes]:::devNode
+    end
+
+    A --> B
+    A --> C --> B
+    D --> B

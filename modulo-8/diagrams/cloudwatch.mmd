@@ -1,0 +1,26 @@
+flowchart LR
+    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF,font-size:14px;
+    classDef userNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000,font-size:14px;
+
+    subgraph "📊 Serviços AWS"
+        A[EC2]:::awsNode
+        B[S3]:::awsNode
+        C[Lambda]:::awsNode
+    end
+
+    D[CloudWatch Metrics & Logs]:::awsNode
+    E[Dashboards Personalizados]:::awsNode
+    F[Logs Insights (Consultas Avançadas)]:::awsNode
+    G[Alarmes (Thresholds)]:::awsNode
+    H[Ações Automatizadas (SNS, Lambda, Auto Scaling)]:::awsNode
+    I[Notificações ou Correções]:::userNode
+
+    A --> D
+    B --> D
+    C --> D
+    D --> E
+    D --> F
+    E --> G
+    F --> G
+    G --> H
+    H --> I
