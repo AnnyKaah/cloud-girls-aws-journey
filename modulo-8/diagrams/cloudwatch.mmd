@@ -1,5 +1,4 @@
-```mermaid
-graph TD
+flowchart TD
     A["EC2"] --> D["CloudWatch Metrics & Logs"]
     B["S3"] --> D
     C["Lambda"] --> D
@@ -7,16 +6,5 @@ graph TD
     D --> F["Logs Insights - Consultas Avançadas"]
     E --> G["Alarmes - Thresholds"]
     F --> G
-    G --> H["Ações Automatizadas (SNS, Lambda, Auto Scaling)"]
+    G --> H["Ações Automatizadas SNS/Lambda/Auto Scaling"]
     H --> I["Notificações ou Correções"]
-
-    style A fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
-    style B fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
-    style C fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
-    style D fill:#4A90E2,color:#FFF
-    style E fill:#9013FE,color:#FFF
-    style F fill:#9013FE,color:#FFF
-    style G fill:#FF9900,color:#000
-    style H fill:#4A90E2,color:#FFF
-    style I fill:#00FF00,stroke:#333,stroke-width:2px
-```
