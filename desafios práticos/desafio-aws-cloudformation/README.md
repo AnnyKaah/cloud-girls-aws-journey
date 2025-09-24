@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="desafios práticos/desafio-aws-cloudformation/images/banner.png" alt="AWS cloudformation banner" width="1000"/>
-</p>
-
 <div align = "center">
 
 # Desafio AWS CloudFormation - Bootcamp Santander Code Girls 2025
@@ -146,4 +142,5 @@ Quer trocar ideias ou tirar dúvidas?
 ---
 
 > Obrigada por conferir meu projeto! 🙌
+
 
