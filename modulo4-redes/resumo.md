@@ -56,3 +56,60 @@ Este módulo apresenta os conceitos de **VPC**, **subnets**, **security groups**
   - **CLB (Classic Load Balancer)** → mais antigo, menos usado hoje  
 - **Exemplo**: 2 instâncias EC2 atrás de um ALB para suportar alta demanda de usuários  
 
+## 🏗️ Arquitetura ELB + EC2
+
+```mermaid
+graph TD
+    A[👤 Usuário] --> B[💻 Elastic Load Balancer]
+    B --> C[EC2 Instance 1]
+    B --> D[EC2 Instance 2]
+    B --> E[EC2 Instance 3]
+
+    %% Estilos
+    style A fill:#FF9900,stroke:#333,stroke-width:2px,color:#000
+    style B fill:#4A90E2,color:#FFF
+    style C fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style D fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style E fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+
+```
+> ✅ Explicação: Usuários acessam o ELB, que distribui requisições entre múltiplas instâncias EC2.
+
+## 🏗️ Arquitetura + S3
+
+> ✅ Explicação: Usuários acessam o conteúdo via CloudFront → CloudFront busca objetos no S3 Bucket → entrega conteúdo rápido globalmente.  
+
+```mermaid
+graph TD
+    A[👤 Usuário] --> B[🌐 CloudFront Distribution]
+    B --> C[📁 S3 Bucket]
+
+    %% Estilos
+    style A fill:#FF9900,stroke:#333,stroke-width:2px,color:#000
+    style B fill:#4A90E2,color:#FFF
+    style C fill:#FFD700,color:#000
+```
+## 🏗️ ️Arquitetura VPC + Subnets
+
+> ✅ Explicação: Estrutura de rede da VPC com subnets públicas/privadas; instâncias públicas acessíveis da internet e privadas isoladas; banco de dados RDS na subnet privada.  
+
+```mermaid
+graph TD
+    A[VPC Principal] --> B[Subnet Publica 1]
+    A --> C[Subnet Publica 2]
+    A --> D[Subnet Privada 1]
+    A --> E[Subnet Privada 2]
+    B --> F[EC2 Publica]
+    D --> G[EC2 Privada]
+    D --> H[RDS - Banco de Dados]
+
+    %% Estilos
+    style A fill:#4A90E2,color:#FFF,stroke:#000,stroke-width:2px
+    style B fill:#9013FE,color:#FFF
+    style C fill:#9013FE,color:#FFF
+    style D fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style E fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style F fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style G fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style H fill:#FFD700,color:#000
+```
