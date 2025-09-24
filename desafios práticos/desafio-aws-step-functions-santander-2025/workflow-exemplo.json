@@ -1,0 +1,49 @@
+{
+  "Comment": "Exemplo de Workflow Simples para Bootcamp - Processa uma tarefa com Lambda (Corrigido)",
+  "StartAt": "ValidarEntrada",
+  "States": {
+    "ValidarEntrada": {
+      "Type": "Pass",
+      "Parameters": {
+        "mensagem": "Iniciando workflow...",
+        "input.$": "$"
+      },
+      "ResultPath": "$.validacao",
+      "Next": "ProcessarComLambda"
+    },
+    "ProcessarComLambda": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:765949263809:function:NossaPrimeiraFunction",
+      "Parameters": {
+        "input.$": "$.validacao"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Next": "Falha"
+        }
+      ],
+      "Next": "Sucesso"
+    },
+    "Sucesso": {
+      "Type": "Succeed"
+    },
+    "Falha": {
+      "Type": "Fail",
+      "Error": "Erro no processamento",
+      "Cause": "Lambda falhou ou timeout"
+    }
+  }
+}
