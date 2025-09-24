@@ -1,9 +1,3 @@
-<p align="center">
-  <img src="/images/banner.png" alt="AWS cloudformation banner" width="1000"/>
-</p>
-
-<div align = "center">
-
 # Desafio AWS CloudFormation - Bootcamp Santander Code Girls 2025
 
 Olá! Bem-vindo(a) ao meu repositório do desafio prático de **AWS CloudFormation** do Bootcamp Santander Code Girls 2025. Neste projeto, implementei **Infrastructure as Code (IaC)** para provisionar recursos AWS de forma automatizada, idempotente e declarativa. Criei uma stack simples que inclui um **S3 Bucket privado** e uma **IAM Role** com permissões de acesso ao S3, usando um template YAML customizado.
@@ -124,3 +118,4 @@ Quer trocar ideias ou tirar dúvidas?
 ---
 
 > Obrigada por conferir meu projeto! 🙌
+
