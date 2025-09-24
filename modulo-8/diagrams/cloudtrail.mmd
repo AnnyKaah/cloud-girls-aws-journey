@@ -1,16 +1,16 @@
 flowchart LR
-    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF,font-size:14px;
-    classDef userNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000,font-size:14px;
+    classDef awsNode fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF;
+    classDef userNode fill:#FF9900,stroke:#333,stroke-width:2px,color:#000;
 
-    subgraph "👤 Usuários & Serviços AWS"
-        A[API Calls / Usuários]:::userNode
+    subgraph "Usuarios & Servicos AWS"
+        A["API Calls / Usuarios"]:::userNode
     end
 
-    B[CloudTrail - Registro de Eventos]:::awsNode
-    C[S3 Bucket (Armazenamento de Logs)]:::awsNode
-    D[CloudWatch Logs (Análise em Tempo Real)]:::awsNode
-    E[Alarmes e Insights]:::awsNode
-    F[Notificações via SNS ou Ações via Lambda]:::awsNode
+    B["CloudTrail - Registro de Eventos"]:::awsNode
+    C["S3 Bucket (Armazenamento de Logs)"]:::awsNode
+    D["CloudWatch Logs (Analise em Tempo Real)"]:::awsNode
+    E["Alarmes e Insights"]:::awsNode
+    F["Notificacoes via SNS ou Acoes via Lambda"]:::awsNode
 
     A --> B
     B --> C
