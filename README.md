@@ -79,10 +79,10 @@ Clique em cada módulo para ver resumos, anotações, códigos e diagramas.
 9. **[Módulo 9: Segurança na AWS](/modulo-9/MODULO-9.md)**  
    KMS, GuardDuty, WAF.  
 
-10. **[Módulo 10: Desenvolvimento e Ferramentas](/modulo-10-/MODULO-10.md)**  
+10. **[Módulo 10: Desenvolvimento e Ferramentas](/modulo-10/MODULO-10.md)**  
    SDKs, CLI, SAM para serverless.  
 
-11. **[Módulo 11: Automação e DevOps na AWS](/modulo-11--/MODULO-11.md)**  
+11. **[Módulo 11: Automação e DevOps na AWS](/modulo-11/MODULO-11.md)**  
    CodePipeline, CloudFormation, Terraform.  
 
 ---
@@ -274,6 +274,7 @@ Quer trocar ideias ou tirar dúvidas?
 
 
 > Obrigada por conferir meu projeto! 🙌
+
 
 
 
