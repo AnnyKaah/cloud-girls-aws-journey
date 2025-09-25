@@ -90,16 +90,16 @@ Clique em cada módulo para ver resumos, anotações, códigos e diagramas.
 
 Durante o Bootcamp, desenvolvi os seguintes desafios na AWS:
 
-- [Desafio 01 - Arquitetura EC2 + S3 + Lambda + RDS](./desafios práticos/Desafio-Dio-aws-arquitetura-s3-lambda-ec2-rds-main/)  
+- [Desafio 01 - Arquitetura EC2 + S3 + Lambda + RDS](./desafiospráticos/Desafio-Dio-aws-arquitetura-s3-lambda-ec2-rds-main)  
   *Mostra como EC2, S3, Lambda e RDS se conectam em uma arquitetura completa.*  
 
-- [Desafio 02 - CloudFormation – Infraestrutura Automatizada](./desafios práticos/desafio-aws-cloudformation)  
+- [Desafio 02 - CloudFormation – Infraestrutura Automatizada](./desafiospráticos/desafio-aws-cloudformation)  
   *Automatiza a criação de recursos AWS via templates YAML/JSON, incluindo EC2, S3, Lambda e RDS.*  
 
-- [Desafio 03 - Step Functions – Orquestração Serverless](./desafios práticos/desafio-aws-step-functions-santander-2025)  
+- [Desafio 03 - Step Functions – Orquestração Serverless](./desafiospráticos/desafio-aws-step-functions-santander-2025)  
   *SOrquestra funções Lambda em workflow serverless, com tratamento de sucesso e falha.*  
 
-- [Desafio 04 - Lambda + S3](./desafios práticos/desafio-lambda-s3-bootcamp-codegirls-2025-main)  
+- [Desafio 04 - Lambda + S3](./desafiospráticos/desafio-lambda-s3-bootcamp-codegirls-2025-main)  
   *Usuário envia arquivo para S3, evento dispara Lambda que processa e grava resultado em outro bucket.*  
 
 ---
@@ -274,6 +274,7 @@ Quer trocar ideias ou tirar dúvidas?
 
 
 > Obrigada por conferir meu projeto! 🙌
+
 
 
 
