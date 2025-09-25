@@ -141,22 +141,123 @@ Levo daqui o aprendizado sobre **escalabilidade, segurança, automação e otimi
 ## 📊 Diagramas de Arquitetura
 
 - **CloudFront + S3**  
-  ![CloudFront + S3](./images/cloudfront-s3.png)
 
-- **S3 + Glacier**  
-  ![S3 + Glacier](./images/s3-glacier.png)
+> Explicação: Usuários acessam conteúdo estático (ex: site web) via CloudFront (CDN global), que cacheia e distribui do S3 Bucket de origem. CloudFront reduz latência e custos de transferência, com logs opcionais para CloudWatch.
 
-- **ECS + ALB**  
-  ![ECS + ALB](./images/ecs-alb.png)
+ ```mermaid
+graph TD
+    U[Usuario] --> CF[CloudFront Distribution]
+    CF --> S3[S3 Bucket Origem]
+    CF --> CW[CloudWatch Logs Opcional]
 
-- **EKS + Pods**  
-  ![EKS + Pods](./images/eks-pods.png)
+    style U fill:#FF9900,stroke:#333,stroke-width:2px
+    style CF fill:#4A90E2,color:#FFF
+    style S3 fill:#FFD700,color:#000
+    style CW fill:#9013FE,color:#FFF
+```
 
-- **Lambda + SNS + S3**  
-  ![Lambda + SNS + S3](./images/lambda-sns-s3.png)
+- **S3 + Glacier**
 
-- **SNS + SQS**  
-  ![SNS + SQS](./images/sns-sqs.png)
+   > Explicação: Arquivos são armazenados no S3 Bucket (armazenamento quente/frequente). Políticas de Lifecycle movem dados inativos para S3 Glacier (armazenamento frio/barato de longo prazo). Recuperação de Glacier pode levar horas/dias.
+  
+ ```mermaid
+graph TD
+    U[Usuario App] --> S3[S3 Bucket Armazenamento Quente]
+    S3 -.-> G[S3 Glacier Armazenamento Frio]
+    G -.-> S3[Recuperacao Opcional]
+    S3 --> CW[CloudWatch Metrics]
+
+    style U fill:#FF9900,stroke:#333,stroke-width:2px
+    style S3 fill:#FFD700,color:#000
+    style G fill:#9013FE,color:#FFF
+    style CW fill:#9013FE,color:#FFF
+```
+
+- **ECS + ALB**
+
+   > Explicação: Usuários chegam pelo Application Load Balancer (ALB); o ALB encaminha para o Target Group do serviço ECS (tasks/container instances). O serviço ECS escala tasks automaticamente e envia logs/metrics para CloudWatch.
+   
+ ```mermaid
+graph TD
+    U[Usuario] --> ALB[Application Load Balancer ALB]
+    ALB --> TG[Target Group]
+    TG --> ECS[ECS Service Tasks]
+    ECS --> Task[ECS Task Container]
+    ECS --> CW[CloudWatch Metrics Logs]
+
+    style U fill:#FF9900,stroke:#333,stroke-width:2px
+    style ALB fill:#4A90E2,color:#FFF
+    style TG fill:#FFD700,color:#000
+    style ECS fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style Task fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style CW fill:#9013FE,color:#FFF
+ ```
+
+- **EKS + Pods**
+
+> Explicação: Usuários acessam via ALB ou Ingress no EKS (Elastic Kubernetes Service); o Load Balancer encaminha para o Kubernetes Service, que gerencia Pods (via Deployment/ReplicaSet). Pods enviam métricas para CloudWatch Container Insights ou Prometheus.
+
+   ```mermaid
+     graph TD
+    U[Usuario] --> ALB[ALB Ingress]
+    ALB --> K8sSvc[Kubernetes Service]
+    K8sSvc --> Pods[Pods Deployment ReplicaSet]
+    Pods --> CM[ConfigMap Secret Opcional]
+    Pods --> CW[CloudWatch Metrics]
+
+    style U fill:#FF9900,stroke:#333,stroke-width:2px
+    style ALB fill:#4A90E2,color:#FFF
+    style K8sSvc fill:#FFD700,color:#000
+    style Pods fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style CM fill:#9013FE,color:#FFF
+    style CW fill:#9013FE,color:#FFF
+    
+   ```
+
+- **Lambda + SNS + S3**
+
+ > Explicação: Upload no S3 Bucket aciona uma notificação de evento para SNS Topic; o SNS publica para uma Lambda (via subscription); a Lambda processa o evento/arquivo e armazena o resultado de volta no S3 (ou outro bucket). Logs da Lambda vão para CloudWatch.
+
+  ```mermaid
+  graph TD
+    U[Usuario] --> S3[S3 Bucket Upload]
+    S3 --> SNS[SNS Topic Event Notification]
+    SNS --> Lambda[Lambda Processa Evento]
+    Lambda --> S3Out[S3 Bucket Resultado]
+    Lambda --> CW[CloudWatch Logs]
+
+    style U fill:#FF9900,stroke:#333,stroke-width:2px
+    style S3 fill:#FFD700,color:#000
+    style SNS fill:#4A90E2,color:#FFF
+    style Lambda fill:#4A90E2,color:#FFF
+    style S3Out fill:#FFD700,color:#000
+    style CW fill:#9013FE,color:#FFF
+    
+  ```
+
+- **SNS + SQS**
+
+   > Explicação: Um Publisher/App publica mensagens em um SNS Topic; o SNS faz fan-out para múltiplas SQS Queues (subscriptions). Workers/Consumers leem das queues de forma assíncrona. Dead-Letter Queue (DLQ) captura mensagens falhadas (setas tracejadas indicam fluxo de erro).
+    
+   ```mermaid
+  graph TD
+    Pub[Publisher App] --> SNS[SNS Topic]
+    SNS --> Q1[SQS Queue Worker A]
+    SNS --> Q2[SQS Queue Worker B]
+    Q1 --> W1[Worker A Consumer]
+    Q2 --> W2[Worker B Consumer]
+    Q1 -.-> DLQ[Dead-Letter Queue Falhas]
+    Q2 -.-> DLQ
+
+    style Pub fill:#FF9900,stroke:#333,stroke-width:2px
+    style SNS fill:#4A90E2,color:#FFF
+    style Q1 fill:#FFD700,color:#000
+    style Q2 fill:#FFD700,color:#000
+    style W1 fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style W2 fill:#232F3E,stroke:#F90,stroke-width:2px,color:#FFF
+    style DLQ fill:#9013FE,color:#FFF
+    
+   ```
 
 ---
 
@@ -169,8 +270,9 @@ Quer trocar ideias ou tirar dúvidas?
 
 ---
 
-<p align="center">
   <img src="/extras/concluido.png" alt="Bootcamp Concluído" width="400"/>
-</p>
+
 
 > Obrigada por conferir meu projeto! 🙌
+
+
