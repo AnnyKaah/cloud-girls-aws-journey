@@ -76,7 +76,7 @@ Clique em cada módulo para ver resumos, anotações, códigos e diagramas.
 8. **[Módulo 8: Gerenciamento e Governança na AWS](/modulo-8/MODULO-8.md)**  
    CloudWatch, IAM avançado, Cost Explorer.  
 
-9. **[Módulo 9: Segurança na AWS](/modulo9/MODULO-9.md)**  
+9. **[Módulo 9: Segurança na AWS](/modulo-9/MODULO-9.md)**  
    KMS, GuardDuty, WAF.  
 
 10. **[Módulo 10: Desenvolvimento e Ferramentas](/modulo-10-/MODULO-10.md)**  
@@ -274,5 +274,6 @@ Quer trocar ideias ou tirar dúvidas?
 
 
 > Obrigada por conferir meu projeto! 🙌
+
 
 
